@@ -26,7 +26,7 @@ The default Babel options used for Vue.js components are:
 }
 ```
 
-If you wish to mofidy this, you can add a `babel` field in your webpack config, which will be merged with the default options. For example:
+If you wish to modify this, you can add a `babel` field in your webpack config, which will be merged with the default options. For example:
 
 ``` js
 // webpack.config.js
