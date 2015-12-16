@@ -21,7 +21,11 @@ module.exports = {
       {
         // edit this for additional asset file types
         test: /\.(png|jpg|gif)$/,
-        loader: 'file?name=[name].[ext]?[hash]'
+        loader: 'url',
+        query: {
+          limit: 10000,
+          name: '[name].[ext]?[hash]'
+        }
       }
     ]
   },
