@@ -4,7 +4,7 @@
   "description": "Example using Webpack with vue-loader",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --quiet",
+    "dev": "webpack-dev-server --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
@@ -19,6 +19,8 @@
     "babel-runtime": "^5.8.0",
     "cross-env": "^1.0.5",
     "css-loader": "^0.23.0",
+    "eslint": "^1.10.3",
+    "eslint-loader": "^1.1.1",
     "file-loader": "^0.8.4",
     "jade": "^1.11.0",
     "style-loader": "^0.13.0",

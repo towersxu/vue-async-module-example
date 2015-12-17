@@ -34,6 +34,12 @@ module.exports = {
   babel: {
     presets: ['es2015', 'stage-0'],
     plugins: ['transform-runtime']
+  },
+  // lint JavaScript code in *.vue files with ESLint
+  vue: {
+    loaders: {
+      js: 'babel!eslint'
+    }
   }
 }
 
