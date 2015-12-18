@@ -14,6 +14,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel!eslint',
+        // make sure to exclude 3rd party code in node_modules
         exclude: /node_modules/
       },
       {
@@ -21,7 +22,9 @@ module.exports = {
         test: /\.(png|jpg|gif)$/,
         loader: 'url',
         query: {
+          // inline files smaller then 10kb as base64 dataURL
           limit: 10000,
+          // fallback to file-loader with this naming scheme
           name: '[name].[ext]?[hash]'
         }
       }
@@ -29,13 +32,14 @@ module.exports = {
   },
   // vue-loader config:
   // lint all JavaScript inside *.vue files with ESLint
+  // make sure to adjust your .eslintrc
   vue: {
     loaders: {
       js: 'babel!eslint'
     }
   },
-  // example: if you wish to apply custom babel options
-  // instead of using vue-loader's default:
+  // configure babel-loader (for both .js and .vue files).
+  // see https://babeljs.io/docs/usage/options/
   babel: {
     presets: ['es2015', 'stage-0'],
     plugins: ['transform-runtime']
