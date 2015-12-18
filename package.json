@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --config build/webpack.dev.config.js",
-    "build": "webpack --progress --hide-modules --config build/webpack.prod.config.js"
+    "build": "webpack --progress --hide-modules --config build/webpack.prod.config.js",
+    "test": "karma start build/karma.conf.js"
   },
   "dependencies": {
     "vue": "^1.0.0"
@@ -21,7 +22,15 @@
     "eslint": "^1.10.3",
     "eslint-loader": "^1.1.1",
     "file-loader": "^0.8.4",
+    "function-bind": "^1.0.2",
     "jade": "^1.11.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.15",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-spec-reporter": "0.0.23",
+    "karma-webpack": "^1.7.0",
+    "phantomjs": "^1.9.19",
     "style-loader": "^0.13.0",
     "stylus-loader": "^1.4.0",
     "template-html-loader": "0.0.3",
