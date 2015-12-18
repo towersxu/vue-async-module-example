@@ -13,7 +13,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel!eslint',
         exclude: /node_modules/
       },
       {
