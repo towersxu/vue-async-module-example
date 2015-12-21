@@ -1,3 +1,8 @@
+// we can just use the exact same webpack config by requiring it
+// but make sure to delete the normal entry
+var webpackConf = require('./webpack.base.config')
+delete webpackConf.entry
+
 module.exports = function (config) {
   config.set({
     browsers: ['PhantomJS'],
@@ -9,8 +14,7 @@ module.exports = function (config) {
     preprocessors: {
       '../test/unit/index.js': ['webpack']
     },
-    // we can just use the exact same webpack config by requiring it
-    webpack: require('./webpack.base.config'),
+    webpack: webpackConf,
     webpackMiddleware: {
       noInfo: true
     },
