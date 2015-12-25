@@ -18,7 +18,7 @@ describe('component with dependency injection example', () => {
         msg: 'Hello from mock'
       }
     })
-    // now we can test it! 
+    // now we can test it!
     const vm = new Vue({
       template: '<div><test></test></div>',
       components: {
