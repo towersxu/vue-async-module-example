@@ -37,11 +37,5 @@ module.exports = {
     loaders: {
       js: 'babel!eslint'
     }
-  },
-  // configure babel-loader (for both .js and .vue files).
-  // see https://babeljs.io/docs/usage/options/
-  babel: {
-    presets: ['es2015', 'stage-0'],
-    plugins: ['transform-runtime']
   }
 }
