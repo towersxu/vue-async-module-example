@@ -4,9 +4,8 @@
 
 <script>
 // this is an example component with external dependencies.
-// the "../service" module doesn't actually exists, but we
-// will inject it in our tests!
-import SomeService from '../service'
+// we will replace "./service" with a mock during tests!
+import SomeService from './service'
 
 export default {
   data () {

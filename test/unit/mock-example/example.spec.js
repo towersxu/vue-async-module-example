@@ -14,7 +14,7 @@ describe('component with dependency injection example', () => {
     // create an instance of the Example module,
     // injecting a mocked "../service" dependency
     const Example = ExampleInjector({
-      '../service': {
+      './service': {
         msg: 'Hello from mock'
       }
     })
