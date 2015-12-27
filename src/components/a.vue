@@ -14,10 +14,12 @@
 </template>
 
 <script>
+import { getMessage } from '../services/message'
+
 export default {
   data () {
     return {
-      msg: 'Hello from Component A!'
+      msg: getMessage()
     }
   }
 }
