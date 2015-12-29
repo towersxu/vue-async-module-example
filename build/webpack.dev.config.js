@@ -1,6 +1,6 @@
 var config = require('./webpack.base.config')
 
-config.devtool = '#source-map'
+config.devtool = 'eval-source-map'
 
 config.devServer = {
   noInfo: true
