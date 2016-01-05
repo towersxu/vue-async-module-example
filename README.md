@@ -5,6 +5,9 @@
 
 > Example using [vue-loader](https://github.com/vuejs/vue-loader) with [Webpack](http://webpack.github.io).
 
+- To understand how things work, read the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- To quickly scaffold new projects with recommended setups, use [vue-cli](https://github.com/vuejs/vue-cli).
+
 ## Topics Covered
 
 - Using `vue-loader` with hot reload for development
@@ -28,5 +31,3 @@ npm run build
 # run unit tests
 npm test
 ```
-
-For detailed explanation on how things work, read the [docs for vue-loader](http://vuejs.github.io/vue-loader).
