@@ -8,9 +8,9 @@ div
 </template>
 
 <script>
-import CompA from './components/a.vue'
-import CompB from './components/b.vue'
-import Counter from './components/counter.vue'
+import CompA from './components/A.vue'
+import CompB from './components/B.vue'
+import Counter from './components/Counter.vue'
 
 export default {
   data () {
