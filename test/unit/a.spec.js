@@ -1,9 +1,9 @@
 /* global describe, it, expect */
 
 import Vue from 'vue'
-import ComponentA from '../../src/components/a.vue'
+import ComponentA from '../../src/components/A.vue'
 
-describe('a.vue', () => {
+describe('A.vue', () => {
 
   // asserting JavaScript options
   it('should have correct message', () => {
@@ -28,7 +28,7 @@ describe('a.vue', () => {
     // make sure to use the require() syntax here.
     // for webpack loader string syntax, see:
     // - https://webpack.github.io/docs/loaders.html
-    const inject = require('!!vue?inject!../../src/components/a.vue')
+    const inject = require('!!vue?inject!../../src/components/A.vue')
     // create an instance of the component module,
     // injecting a mocked "../services/message" dependency
     const ComponentAWithMock = inject({

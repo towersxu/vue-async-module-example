@@ -1,13 +1,13 @@
 /* global describe, it, expect */
 
 import Vue from 'vue'
-import App from '../../src/app.vue'
+import App from '../../src/App.vue'
 
-describe('app.vue', () => {
+describe('App.vue', () => {
   it('should render correct contents', () => {
     const vm = new Vue({
       template: '<div><app></app></div>',
-      components: { app: App }
+      components: { App }
     }).$mount()
     expect(vm.$el.querySelector('.logo')).toBeTruthy()
     expect(vm.$el.querySelector('h1').textContent).toBe('Hello from vue-loader!')
