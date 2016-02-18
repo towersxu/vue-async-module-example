@@ -1,12 +1,11 @@
 {
-  "name": "vue-loader-example",
+  "name": "vue-async-module-example",
   "version": "3.0.0",
   "description": "Example using Webpack with vue-loader",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --config build/webpack.dev.config.js",
-    "build": "webpack --progress --hide-modules --config build/webpack.prod.config.js",
-    "test": "karma start build/karma.conf.js"
+    "dev": "webpack-dev-server --inline --hot --quiet --port 8808 --config build/webpack.dev.config.js",
+    "build": "webpack --progress --hide-modules --config build/webpack.prod.config.js"
   },
   "dependencies": {
     "vue": "^1.0.0"
@@ -32,6 +31,7 @@
     "karma-spec-reporter": "0.0.23",
     "karma-webpack": "^1.7.0",
     "phantomjs": "^1.9.19",
+    "q": "^1.4.1",
     "stylus-loader": "^1.4.0",
     "template-html-loader": "0.0.3",
     "url-loader": "^0.5.7",
@@ -42,6 +42,5 @@
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
   },
-  "author": "Evan You",
   "license": "MIT"
 }

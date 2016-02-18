@@ -2,28 +2,59 @@
 div
   img(class="logo", src="./assets/logo.png")
   h1 {{msg}}
-  comp-a
-  comp-b
-  counter
+  <button v-on:click="loadModule">Load</button>
+  <div id="example"></div>
 </template>
 
 <script>
-import CompA from './components/A.vue'
-import CompB from './components/B.vue'
-import Counter from './components/Counter.vue'
 
-export default {
-  data () {
-    return {
-      msg: 'Hello from vue-loader!'
+  var Vue = require('vue');
+  var CompA = require('./components/A.vue');
+  var Q = require('q');
+
+  var app = {
+    data:function(){
+      return {
+        msg: 'Hello from vue-loader!'
+      }
+    },
+    methods:{
+      loadModule:function() {
+        var link = Vue.component('link',function(){
+          var deferred = Q.defer();
+          require.ensure(["./Ansyc.vue"], function(require) {
+            var a = require("./Async.vue");
+            deferred.resolve(a)
+          });
+          return deferred.promise;
+        });
+        link().then(function(res){
+          new Vue(Object.assign({
+            el:'#example'
+          },res))
+        });
+//        var p = new Promise(function(resolve,reject){
+//          Vue.component('link',function(resolve,reject){
+//            setTimeout(function(){
+//              resolve({
+//                template:'<a href="http://www.taobao.com">taobao</a>'
+//              })
+//            },3000)
+//          })(resolve,reject);
+//        });
+//        p.then(function(res){
+//          new Vue(Object.assign({
+//            el:'#example'
+//          },res))
+//        });
+      }
+    },
+    components:{
+      CompA:CompA,
     }
-  },
-  components: {
-    CompA,
-    CompB,
-    Counter
-  }
-}
+  };
+  module.exports = app;
+
 </script>
 
 <style lang="stylus">

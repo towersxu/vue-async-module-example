@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
 import { getMessage } from '../services/message'
 
 export default {
