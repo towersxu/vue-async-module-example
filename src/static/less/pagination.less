@@ -1,0 +1,48 @@
+@import "color.less";
+.pagination{
+    text-align: center;
+    span{
+        display: inline-block;
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .page{
+        width: 32px;
+        height: 32px;
+        border: 1px solid @font_grey;
+        text-align: center;
+        color: @font_grey;
+        border-radius: 16px;
+        cursor: pointer;
+        &.select{
+            background: @red;
+            color: @base_white;
+            border: 1px solid @red;
+        }
+        &.end{
+            background: @font_grey;
+            color: @base_white;
+        }
+    }
+    .dot{
+        width: 6px;
+        height: 6px;
+        border: 1px solid @font_grey;
+        border-radius: 3px;
+    }
+    .page-tool{
+        border: 1px solid @font_grey;
+        width: 64px;
+        height: 32px;
+        border-radius: 16px;
+        background: @font_grey;
+        color: @base_white;
+        cursor: pointer;
+        &.next{
+            margin-left: 20px;
+        }
+        &.prev{
+            margin-right: 20px;
+        }
+    }
+}
